@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For CNCShield
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ScheduleEntry	KEYWORD1
+CNCShieldMotor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+get	KEYWORD2
+set	KEYWORD2
+reschedule	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+BANANAS	LITERAL1
