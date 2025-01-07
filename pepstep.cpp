@@ -41,6 +41,6 @@ auto pep::CNCShieldMotor::set(ScheduleEntry& scheduler, double speed) -> void {
 auto pep::CNCShieldMotor::stop(ScheduleEntry& scheduler) -> void {
 	scheduler.reschedule(timeout_default);
 }
-auto pep:CNCShieldMotor::reset() -> void {
+auto pep::CNCShieldMotor::reset() -> void {
 	steps = 0;
 }
