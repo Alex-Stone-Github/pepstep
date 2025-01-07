@@ -31,6 +31,14 @@ public:
   auto step() -> void; // implicit cast of this to void*
   auto get(double steps_per_unit) -> double;
   auto set(ScheduleEntry& scheduler, double speed) -> void;
+  auto stop(ScheduleEntry& scheduler) -> void;
 };
 
 }
+
+// Conveniece Macros
+const unsigned long timeout_default = 10000;
+#define CNCSMEntry(X) pep::ScheduleEntry(timeout_default, (void(*)(void*))(&pep::CNCShieldMotor::step), (void*)&X)
+
+
+#define POLL(X) for (auto& entry : X) {entry.poll(millis());}

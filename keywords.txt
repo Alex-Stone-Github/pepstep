@@ -15,6 +15,7 @@ CNCShieldMotor	KEYWORD1
 
 get	KEYWORD2
 set	KEYWORD2
+stop	KEYWORD2
 reschedule	KEYWORD2
 
 #######################################

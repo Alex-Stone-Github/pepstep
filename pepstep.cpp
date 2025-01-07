@@ -38,3 +38,6 @@ auto pep::CNCShieldMotor::set(ScheduleEntry& scheduler, double speed) -> void {
 	scheduler.reschedule(one_second / desired_steps_per_second);
 }
 
+auto pep::CNCShieldMotor::stop(ScheduleEntry& scheduler) -> void {
+	scheduler.reschedule(timeout_default);
+}
