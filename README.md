@@ -1,6 +1,8 @@
 # Pepstep
 _For stepper motors with pep to their step_
 
+![Library Cover Image](docs/cover.png)
+
 ## Functionality
 
 This library allows the control of multiple stepper motors concurrently through "ScheduleEntrys."
