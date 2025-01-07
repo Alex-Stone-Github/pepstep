@@ -32,6 +32,7 @@ public:
   auto get(double steps_per_unit) -> double;
   auto set(ScheduleEntry& scheduler, double speed) -> void;
   auto stop(ScheduleEntry& scheduler) -> void;
+  auto reset() -> void;
 };
 
 }

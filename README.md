@@ -12,6 +12,7 @@ It supports stepper motors from the <CNCShield.h> Arduino library. The CNCShield
   auto get(double steps_per_unit) -> double;
   auto set(ScheduleEntry& scheduler, double speed) -> void;
   auto stop(ScheduleEntry& scheduler) -> void;
+  auto reset() -> void;
 ```
 
 
@@ -63,6 +64,7 @@ pep::CNCShieldMotor linear(arduino_shield.get_motor(1));
 
 void printhi(void*) {
   Serial.println("Hello, World");
+  rotation.reset(); // Reset Internal Step Counter, "Encoder"
 }
 
 pep::ScheduleEntry schedule[] = {
