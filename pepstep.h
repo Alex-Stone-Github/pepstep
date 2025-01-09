@@ -18,15 +18,10 @@ public:
 constexpr unsigned long one_second = 10000;
 constexpr unsigned long max_steps_per_second = 300;
 class CNCShieldMotor {
-  enum Direction {
-    Forward,
-    Backward,
-  };
-  Direction direction = Forward;
   int steps = 0;
   void* motor;
-
 public:
+  int step_dir = 0;
   explicit CNCShieldMotor(void* motor);
   auto step() -> void; // implicit cast of this to void*
   auto get(double steps_per_unit) -> double;
