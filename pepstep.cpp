@@ -23,7 +23,7 @@ auto pep::ScheduleEntry::poll(unsigned long ellapsed) -> void {
 constexpr unsigned long one_second = 10000;
 constexpr unsigned long max_steps_per_second = 300;
 
-pep::CNCShieldMotor::CNCShieldMotor(void* motor): motor((StepperMotor*)motor) {}
+pep::CNCShieldMotor::CNCShieldMotor(void* motor, int max_steps_per_second): motor((StepperMotor*)motor), max_steps_per_second(max_steps_per_second) {}
 auto pep::CNCShieldMotor::step() -> void {
 	StepperMotor* _motor = (StepperMotor*)motor;
 
